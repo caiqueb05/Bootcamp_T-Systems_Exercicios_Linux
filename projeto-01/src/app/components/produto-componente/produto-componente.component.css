@@ -1,0 +1,11 @@
+.produto-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  text-align: center;
+  margin: 16px;
+}
+
+.produto-imagem {
+  width: 100%;
+  height: auto;
+}

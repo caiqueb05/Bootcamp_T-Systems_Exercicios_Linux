@@ -1,0 +1,19 @@
+<div class="product-container">
+  <input [(ngModel)]="productId" placeholder="Enter product ID">
+  <button (click)="getProductById(productId)">Get Product</button>
+  <button (click)="deleteProduct(productId)">Delete Product</button>
+</div>
+
+<div *ngIf="selectedProduct" class="product-card">
+  <h2>Selected Product</h2>
+  <p><strong>ID:</strong> {{ selectedProduct.id }}</p>
+  <p><strong>Name:</strong> {{ selectedProduct.name }}</p>
+  <p><strong>Description:</strong> {{ selectedProduct.description }}</p>
+</div>
+
+<div *ngFor="let product of products" class="product-card">
+  <h3>Product</h3>
+  <p><strong>ID:</strong> {{ product.id }}</p>
+  <p><strong>Name:</strong> {{ product.name }}</p>
+  <p><strong>Description:</strong> {{ product.description }}</p>
+</div>

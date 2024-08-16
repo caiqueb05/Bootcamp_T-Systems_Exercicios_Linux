@@ -1,0 +1,29 @@
+<!-- <primeiro-componente [user]="user"></primeiro-componente>
+
+
+<p>Carteira de Motorista: {{user.hasCarteira ? "possui":"não possui"}} </p>
+
+<ul>
+    <li *ngFor="let fruta of frutas">{{fruta}}</li>
+</ul>
+
+<div *ngIf="user.idade >= 18">
+    <button (click)="tirarCarteira()">Tirar Carteira de Motorista</button>
+</div>
+<p (mouseenter)="mudarTitle()">Mudar Titulo</p>
+
+<input type="text" [value]="title">
+
+<img [src]="user.image_url" alt="" width="300px"> -->
+
+<produto-componente></produto-componente>
+
+<div *ngFor="let produto of produtos">
+  <produto-componente
+    [nome]="produto.nome"
+    [preco]="produto.preco"
+    [avaliacao]="produto.avaliacao"
+    [imagem]="produto.imagem"
+  >
+  </produto-componente>
+</div>
