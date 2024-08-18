@@ -1,0 +1,17 @@
+.artist-details-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+mat-card {
+  width: 400px;
+}
+
+mat-card-title, mat-card-subtitle {
+  text-align: center;
+}
+
+mat-card-content p {
+  margin: 10px 0;
+}

@@ -1,0 +1,61 @@
+<mat-toolbar>
+  <span class="spacer"></span>
+  <span>SpaMusic</span>
+  <span class="spacer"></span>
+  <div class="search-container">
+    <mat-form-field appearance="fill" class="search-field">
+      <mat-label>Search your artists</mat-label>
+      <input matInput (keyup.enter)="getArtistByName(artistId)" [(ngModel)]="artistId">
+    </mat-form-field>
+    <button mat-icon-button color="accent" (click)="getArtistByName(artistId)">
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+  <span class="spacer"></span>
+  <button mat-button>Home</button>
+  <button mat-button>About</button>
+  <button mat-button>Contact</button>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
+
+<div class="container">
+  <div *ngIf="artist" class="artist-details-card">
+    <img [src]="artist.images[0]?.url" alt="{{ artist.name }}" class="artist-image">
+    <p>{{ artist.name }}</p>
+    <p>Genres: {{ artist.genres.join(', ') }}</p>
+    <p>Followers: {{ artist.followers.total }}</p>
+        <p>
+      <a [href]="artist.external_urls.spotify" target="_blank">{{ artist.name }}</a>
+    </p>
+  </div>
+
+  <div class="content">
+    <div *ngIf="albums && albums.length > 0">
+      <h3>Albums</h3>
+      <div class="albums-container">
+        <div *ngFor="let album of albums" class="card">
+          <img [src]="album.images[0]?.url" alt="{{ album.name }}">
+          <div class="card-title">{{ album.name }}</div>
+          <div class="card-description">{{ album.release_date.slice(0, 4) }}</div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="topTracks && topTracks.length > 0">
+      <h3>Top Tracks</h3>
+      <div class="tracks-container">
+        <div *ngFor="let track of topTracks" class="card">
+          <img [src]="track.albumImage" alt="{{ track.album }}" class="album-cover">
+          <div class="card-title">{{ track.name }}</div>
+          <div class="card-description">Album: {{ track.album }}</div>
+          <div class="card-description">Popularity: {{ track.popularity }}</div>
+          <audio controls *ngIf="track.preview_url">
+            <source [src]="track.preview_url" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

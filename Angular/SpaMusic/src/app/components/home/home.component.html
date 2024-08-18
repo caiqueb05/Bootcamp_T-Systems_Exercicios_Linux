@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span>Music App</span>
+</mat-toolbar>
+
+<div *ngIf="artist">
+  <h2>{{ artist[0]?.name }}</h2>
+  <div *ngFor="let album of artist[0]?.albums">
+    <h3>{{ album.title }}</h3>
+    <ul>
+      <li *ngFor="let song of album.songs">{{ song }}</li>
+    </ul>
+  </div>
+</div>

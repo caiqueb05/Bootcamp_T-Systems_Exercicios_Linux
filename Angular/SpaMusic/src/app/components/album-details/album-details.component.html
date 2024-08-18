@@ -1,0 +1,20 @@
+<!-- <div class="album-details-container" *ngIf="album">
+  <mat-card>
+    <mat-card-title>{{ album.name }}</mat-card-title>
+    <mat-card-content>
+      <p>{{ album.description }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button [routerLink]="['/song', album.id]">View Songs</button>
+    </mat-card-actions>
+  </mat-card>
+</div> -->
+
+<div class="albums-details-container" *ngIf="album">
+  <mat-card *ngFor="let album of album">
+    <img mat-card-image [src]="album.images[0]?.url" alt="{{ album.name }}">
+    <mat-card-title>{{ album.name }}</mat-card-title>
+    <mat-card-subtitle>{{ album.release_date }}</mat-card-subtitle>
+  </mat-card>
+</div>
+

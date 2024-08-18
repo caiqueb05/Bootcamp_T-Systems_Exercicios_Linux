@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total da viewport */
+  }
+  
+  .search-message {
+    font-size: 2em;
+    font-weight: bold;
+    color: white; /* Cor verde do Spotify */
+    text-align: center;
+  }

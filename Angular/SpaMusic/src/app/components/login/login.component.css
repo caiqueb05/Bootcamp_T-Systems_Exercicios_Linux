@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total da viewport */
+  }
+  
+  .spotify-login-button {
+    background-color: #1DB954; /* Cor verde do Spotify */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .spotify-login-button:hover {
+    background-color: #1AA34A; /* Cor verde mais escura para o hover */
+  }
