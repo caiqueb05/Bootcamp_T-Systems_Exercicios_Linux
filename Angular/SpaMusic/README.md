@@ -42,7 +42,9 @@ This project is a challenge to create a turn-based RPG game for evaluation at th
 ### 💻 Result:
 
 
-![ezgif com-gif-maker](https://github.com/caiqueb05/Desafio-T-Academy-RPG/assets/81648936/51fc2d76-291a-4ca0-b6a4-154af297c70e)
+
+![SpaMusicMozillaFirefox2024-08-1811-52-54-Trim-ezgif com-gif-maker(3)](https://github.com/user-attachments/assets/330ad7e5-5c19-431b-af85-050b263b3ee6)
+
 
 ##
 
