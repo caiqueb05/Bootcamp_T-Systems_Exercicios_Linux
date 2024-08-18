@@ -1,19 +1,19 @@
 ### 💡 About the project:
 
-This project is a challenge to create a turn-based RPG game for evaluation at the T-Systems bootcamp.
+This project is a challenge to create a SPA with Angular and Typescrit and consume a music API, in this case I used Spotify, for evaluation at the T-Systems bootcamp.
 
 ##
 
 ### 🛠 Technologies used:
 
-- Pure Java
+- Angular
+- Typescript
 
 ##
 
 ### 📝 Knowledge put into practice:
 
-- OOP
-- Programming logic
+- Frontend
 
 ##
 
